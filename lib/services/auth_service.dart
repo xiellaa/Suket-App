@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthService {
-  final String _baseUrl = 'https://10a8bdf41224.ngrok-free.app/api';
+  final String _baseUrl = 'https://a3437f555a94.ngrok-free.app/api';
 
   String get baseUrl {
     return _baseUrl;

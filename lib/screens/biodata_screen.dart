@@ -130,6 +130,7 @@ class _BiodataScreenState extends State<BiodataScreen> {
       if (e.toString().contains('Unauthorized')) {
         await _authService.deleteToken();
         if (mounted) {
+          // navigator
           Navigator.of(context).pushReplacement(
             MaterialPageRoute(builder: (context) => const LoginScreen()),
           );
@@ -254,7 +255,7 @@ class _BiodataScreenState extends State<BiodataScreen> {
         );
         print('DEBUG: Biodata berhasil diperbarui, UI diupdate.');
         // BARIS INI TIDAK AKAN ADA PERUBAHAN, KARENA ANDA INGIN FUNGSIONALITASNYA TETAP SAMA
-        // Jika sebelumnya ada Navigator.of(context).pop(true); dan itu menyebabkan error,
+        Navigator.of(context).pop(true);
         // pastikan baris itu sudah DIHAPUS atau DIKOMENTARI di file Anda.
         // Saya tidak akan menambahkan/menghapus baris ini secara fungsional.
       } else {
@@ -276,6 +277,7 @@ class _BiodataScreenState extends State<BiodataScreen> {
         print('DEBUG: Token tidak valid, mengarahkan ke login.');
         await _authService.deleteToken();
         if (mounted) {
+          // navigator
           Navigator.of(context).pushReplacement(
             MaterialPageRoute(builder: (context) => const LoginScreen()),
           );

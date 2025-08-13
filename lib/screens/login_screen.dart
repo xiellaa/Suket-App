@@ -492,9 +492,9 @@ class __FormContentState extends State<_FormContent> {
                                   strokeWidth: 2.5,
                                 ),
                               )
-                              : const Text(
-                                "Login",
-                                style: TextStyle(
+                              : Text(
+                                _isRegisterMode ? "Daftar" : "Login",
+                                style: const TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
                                 ),
